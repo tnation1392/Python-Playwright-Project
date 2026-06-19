@@ -1,7 +1,14 @@
-import sys
-from pathlib import Path
+# conftest.py
+import pytest
+from pages.home_page import HomePage
 
-ROOT_DIR = Path(__file__).resolve().parent
 
-if str(ROOT_DIR) not in sys.path:
-    sys.path.insert(0, str(ROOT_DIR))
+@pytest.fixture
+def base_url():
+    return "https://playwright.dev/"
+
+
+@pytest.fixture
+def home_page(page, base_url):
+    page.goto(base_url)
+    return HomePage(page)
