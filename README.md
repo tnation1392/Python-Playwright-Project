@@ -31,6 +31,14 @@ A mini Python automation project using Playwright and pytest-playwright against 
 
 ---
 
+## Additional Playwright features demonstrated
+- API mocking with `page.route(...)`
+- Full mocked JSON responses with `route.fulfill(...)`
+- Modified live API responses with `route.fetch()` + `route.fulfill(...)`
+- UI validation against intercepted network data
+
+---
+
 ## Run locally
 ```bash
 pip install -r requirements.txt
