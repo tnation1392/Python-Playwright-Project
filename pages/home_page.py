@@ -1,4 +1,5 @@
 from playwright.sync_api import Page, expect
+import re
 
 
 class HomePage:
@@ -12,7 +13,7 @@ class HomePage:
         self.page.goto(self.URL)
 
     def assert_loaded(self) -> None:
-        expect(self.page).to_have_title(lambda t: "Playwright" in t)
+        expect(self.page).to_have_title(re.compile("Playwright"))
         expect(self.get_started_link).to_be_visible()
 
     def click_get_started(self) -> None:
