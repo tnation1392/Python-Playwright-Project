@@ -1,6 +1,8 @@
+import pytest
 from playwright.sync_api import Playwright, expect
 
 
+@pytest.mark.skip_browser("firefox")
 def test_homepage_on_iphone_13(new_context, playwright: Playwright, tmp_path):
     iphone_13 = playwright.devices["iPhone 13"]
     context = new_context(**iphone_13)
