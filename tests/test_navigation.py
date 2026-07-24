@@ -3,6 +3,7 @@ from pages.docs_page import DocsPage
 
 
 def test_get_started_navigates_to_installation(page):
+    """Verifies that the Get Started button navigates to installation"""
     home = HomePage(page)
     docs = DocsPage(page)
 

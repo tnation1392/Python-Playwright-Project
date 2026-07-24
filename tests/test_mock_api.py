@@ -2,7 +2,10 @@ from playwright.sync_api import Page, Route, expect
 
 
 def test_mock_fruit_api(page: Page) -> None:
+    """Verifies that the mock_fruit_api function works correctly."""
+
     def handle_fruit_api(route: Route) -> None:
+        """Handles the mock_fruit_api route."""
         mock_data = [
             {"name": "Strawberry", "id": 21},
             {"name": "Blueberry", "id": 22},

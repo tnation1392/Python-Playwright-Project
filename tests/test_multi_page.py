@@ -4,6 +4,7 @@ from pages.docs_page import DocsPage
 
 
 def test_two_tabs_in_same_context(context: BrowserContext):
+    """Verifies that two tabs exist in the same context."""
     home_tab = context.new_page()
     docs_tab = context.new_page()
 
