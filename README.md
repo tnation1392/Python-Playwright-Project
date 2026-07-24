@@ -6,10 +6,11 @@ A mini Python automation project using Playwright and pytest-playwright against 
 
 ## Features
 - Homepage smoke test
-- Navigation test using "Get started"
+- Navigation test using "Get started" and "Star" buttons
 - Multi-tab/browser context test
 - Mobile emulation test
 - Page Object Model structure
+- Testing for debugging purposes when creating tests
 
 ---
 
@@ -17,6 +18,7 @@ A mini Python automation project using Playwright and pytest-playwright against 
 - Python
 - pytest
 - pytest-playwright
+- black
 - Playwright
 
 ---
